@@ -18,17 +18,13 @@ class Calculator {
         scanner.close();
     }
 
-    /**
-     * Вычисляет выражение вида "число оператор число".
-     */
+    
     public static double calculate(String expression) {
         if (expression == null || expression.isBlank()) {
             throw new IllegalArgumentException("Пустое выражение");
         }
 
-        // Ищем оператор среди + - * /
-        // Обрабатываем возможные отрицательные числа: ищем оператор,
-        // у которого есть число слева (не считая знака минус в начале числа).
+        
         char operator = 0;
         int opIndex = -1;
 
